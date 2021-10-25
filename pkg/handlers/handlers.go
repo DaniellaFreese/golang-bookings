@@ -47,3 +47,30 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 		StringMap: stringMap,
 	})
 }
+
+//Reservation renders the reservation page and displays form
+func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "make-reservation.page.go.html", &models.TemplateData{})
+}
+
+//Generals renders the room page
+func (m *Repository) Generals(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "generals.page.go.html", &models.TemplateData{})
+}
+
+//Majors renders the room page
+func (m *Repository) Majors(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "majors.page.go.html", &models.TemplateData{})
+}
+
+//Majors renders the room page
+func (m *Repository) Availability(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "search-availability.page.go.html", &models.TemplateData{})
+
+}
+
+//renders the contage page
+func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "contact.page.go.html", &models.TemplateData{})
+
+}
